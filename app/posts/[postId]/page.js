@@ -11,7 +11,21 @@ async function Post(props) {
   return (
     <div>
       <h1>Post Details</h1>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense
+        fallback={
+          <div
+            style={{
+              padding: "10px",
+              border: "1px solid black",
+              margin: "24px",
+              backgroundColor: "lightgray",
+              borderRadius: "8px",
+            }}
+          >
+            Wait Please...
+          </div>
+        }
+      >
         <PostDetails params={params} />
       </Suspense>
     </div>
